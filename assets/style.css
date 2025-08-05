@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.theme-purple {
+  --bg: linear-gradient(135deg, #2a003f, #5f00a5);
+  --glass: rgba(90, 0, 150, 0.3);
+  --text: #fff;
+}
+
+.theme-black {
+  --bg: #121212;
+  --glass: rgba(30, 30, 30, 0.4);
+  --text: #eee;
+}
+
+.theme-white {
+  --bg: #f1f1f1;
+  --glass: rgba(255, 255, 255, 0.5);
+  --text: #111;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  backdrop-filter: blur(20px);
+  background: var(--glass);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.page {
+  padding: 2rem;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.page:not(.hidden) {
+  display: block;
+}
+
+button, a {
+  display: block;
+  margin: 1rem 0;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  background: var(--glass);
+  color: var(--text);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+button:hover, a:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.back-btn {
+  margin-bottom: 1rem;
+}
+
+.login-box {
+  max-width: 300px;
+  margin: 20vh auto;
+  padding: 2rem;
+  background: var(--glass);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(20px);
+}
+
+.login-box input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
